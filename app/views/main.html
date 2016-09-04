@@ -1,0 +1,53 @@
+<!--
+<section id="main">
+    <img src="images/foodtrack.png" alt="" />
+    <form ng-submit="submit()">
+        <div class="form-group">
+            <input type="text" id="user" placeholder="Usuario" ng-model="user">
+        </div>
+        <div class="form-group">
+            <input type="password" id="password" placeholder="Contraseña" ng-model="password">
+        </div>
+        <button type="submit" class="btn">Iniciar sesión</button>
+    </form>
+</section>
+-->
+<section id="panel">
+    <aside>
+        <ul>
+            <li>
+                <img src="images/foodtrack.png" alt="" />
+            </li>
+            <li data-toggle="sell">¿Qué vendo?</li>
+            <li data-toggle="schedules">Horarios</li>
+            <li data-toggle="events">Eventos</li>
+            <li data-toggle="statistics">Estadísticas</li>
+        </ul>
+    </aside>
+    <main>
+        <div id="sell" class="main-option">
+            <h3>Tipo de comida</h3>
+            <form ng-submit="addFood()">
+                <select ng-model="allFoods.model">
+                    <option ng-repeat="food in allFoods.options" value="{{ food }}">{{ food }}</option>
+                </select>
+                <button type="submit">Agregar</button>
+            </form>
+            {{ foods }}
+        </div>
+        <div id="schedules" class="main-option">
+            <h3>Abrimos</h3>
+            De <input type="time">
+            a <input type="time">
+        </div>
+        <div id="events" class="main-option">
+
+        </div>
+        <div id="statistics" class="main-option">
+
+        </div>
+    </main>
+    <footer>
+        Actualizar mi ubicación en el sitio
+    </footer>
+</section>

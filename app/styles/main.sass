@@ -1,0 +1,83 @@
+@import 'extras'
+
+body
+    margin: 0
+    padding: 0
+.btn
+    padding: 10px 25px
+    font-size: 1rem
+    border: 1px solid $orange
+    background-color: white
+    color: $orange
+    border-radius: 16px
+    &:hover
+        @include transition(.2s)
+        background-color: $orange
+        color: white
+input
+    border: none
+    margin-bottom: 25px
+    font-size: 1rem
+    padding: 10px 25px
+    border-bottom: 1px solid black
+label
+    text-align: left
+#main
+    width: 100vw
+    height: 100vh
+    text-align: center
+    z-index: 2
+    img
+        margin-top: calc(50vh - 225px)
+        width: 300px
+        height: auto
+        margin-bottom: 25px
+#panel
+    width: 100vw
+    height: 100vh
+    z-index: 1
+    position: fixed
+    aside
+        float: left
+        height: 90vh
+        width: 12vw
+        border-right: 2px solid black
+        ul
+            padding: 0
+            margin-top: 0
+            li
+                text-align: center
+                list-style: none
+                height: auto
+                min-height: 50px
+                font-size: 1em
+                line-height: 50px
+                cursor: pointer
+                &:hover
+                    background-color: lightgrey
+                img
+                    margin-top: 16px
+                    width: 150px
+            li:first-child
+                border-bottom: none
+                &:hover
+                    background-color: white
+                    cursor: default
+    main
+        float: left
+        height: 90vh
+        width: calc(88vw - 2px)
+        .main-option
+            display: none
+    footer
+        width: 100vw
+        height: 10vh
+        overflow: auto
+        text-align: center
+        background-color: $red
+        color: white
+        font-size: 2em
+        line-height: 10vh
+        &:hover
+            cursor: pointer
+            background-color: $brown
